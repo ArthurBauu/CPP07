@@ -6,7 +6,7 @@ template <typename T>
 class Array {
 	private:
 		T* elements;
-		unsigned int size;
+		unsigned int int_size;
 	public:
 		Array();
 		Array(unsigned int n);
@@ -15,7 +15,7 @@ class Array {
 		Array &operator=(const Array &other);
 		T &operator[](unsigned int index);
 		const T &operator[](unsigned int index) const;
-		unsigned int getSize() const;
+		unsigned int size() const;
 };
 
 

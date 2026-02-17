@@ -3,12 +3,12 @@
 
 int main() {
 
-    //creating Array of int of size 5
-    std::cout << "Creating Array of int of size 5" << std::endl;
+    //creating Array of int of int_size 5
+    std::cout << "Creating Array of int of int_size 5" << std::endl;
     Array<int> arr(5);
     arr[0] = 10;
     std::cout << "arr[0]: " << arr[0] << std::endl;
-    std::cout << "Size: " << arr.getSize() << std::endl;
+    std::cout << "int_size: " << arr.size() << std::endl;
 
     //testing out of bounds
     std::cout << "\nTesting out of bounds" << std::endl;

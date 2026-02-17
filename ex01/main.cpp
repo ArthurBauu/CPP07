@@ -1,13 +1,7 @@
 #include "iter.hpp"
 #include <cctype>  // for toupper
 
-void print (const int &n) {
-	std::cout << n << " ";
-}
 
-void to_upper(char &c) {
-	c = std::toupper(static_cast<unsigned char>(c));
-}
 
 int main () {
 	int array[] = {1, 2, 3, 4, 5};
@@ -15,7 +9,7 @@ int main () {
 
 	std::cout << "\nTesting iter with int array:" << std::endl;
 	std::cout << "Original array: ";
-	iter(array, length, print);
+	iter(array, length, print<int>);
 	std::cout << std::endl;
 
 
@@ -27,10 +21,11 @@ int main () {
 	std::cout << "Modified message: " << message << std::endl;
 
 
+
 	std::cout << "\nTesting iter with const int array:" << std::endl;
 	const int const_array[] = {10, 20, 30};
 	size_t const_length = sizeof(const_array) / sizeof(const_array[0]);
 	std::cout << "Const array: ";
-	iter(const_array, const_length, print);
+	iter(const_array, const_length, increment<int>);
 	std::cout << std::endl;
 }
